@@ -1,0 +1,62 @@
+{% extends 'base/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} | Projects {% endblock %}</title>
+</head>
+
+<body>
+    {% block content %}
+    <section id="portfolio">
+        <div class="work">
+            <h1 class="sec-title">What I've built</h1>
+            <h1 class="invisible">Works</h1>
+            {% if request.user.is_authenticated %}
+            
+            <div class="create">
+                <a href={% url 'createProject' %}>
+                    <button class="btn"><i class="bx bx-file"></i>Create Project</button>
+                </a>
+            </div>
+            {% endif %}
+            <div class="content">
+                
+                {% for post in posts %}
+                <div class="project">
+                    <div class="text">
+                        <h2>{{post.title}}</h2>
+                        <p>{{post.headline}}</p>
+                        <ul>
+                            {% for tag in post.tags.all %}
+                            <li>{{tag}}</li>
+                            {% endfor %}
+                        </ul>
+                        
+                        <ul class="project-link">
+                            <li><a href={{post.github}}>Github</a></li>
+                            <li><a href="{% url 'viewProject' post.slug %}">Read More</a></li>
+                            {% if request.user.is_authenticated %}
+                            <li><a href={% url 'updateProject' post.slug %}>Update Project</a></li>
+                            <li><a href={% url 'deleteProject' post.slug %}>Delete Project</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                    <div class="img">
+                        <img src={{post.image.url}} alt="">
+                    </div>
+                </div>
+                
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    {% endblock %}
+
+</body>
+
+</html>

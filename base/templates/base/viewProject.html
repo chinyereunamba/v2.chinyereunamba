@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{post.title}}</title>
+</head>
+
+<body>
+
+    <h1>{{post.title}}</h1>
+    <p>{{post.headline}}</p>
+    <p>{{post.body}}</p>
+    {% for tag in post.tags.all %}
+    <p>{{tag}}</p>
+    {% endfor %}
+    <a href={{post.github}} target="_blank">Github</a>
+    <img src={{post.image.url}} alt="">
+</body>
+
+</html>
