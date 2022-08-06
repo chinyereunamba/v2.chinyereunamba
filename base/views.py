@@ -55,7 +55,7 @@ def createProject(request):
         'option': action,
     }
 
-    return render(request, "base\create-project.html", context=context)
+    return render(request, "base/create-project.html", context=context)
 
 
 @login_required()
@@ -75,7 +75,7 @@ def updateProject(request, slug):
         'option': action,
     }
 
-    return render(request, "base\create-project.html", context=context)
+    return render(request, "base/create-project.html", context=context)
 
 
 def viewProject(request, slug):
