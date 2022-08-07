@@ -72,7 +72,20 @@
     <script src="{% static 'js/main.js' %}"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+            disable: 'mobile',
+            offset: 200,
+            duration: 500,
+            easing: 'ease-in-quad',
+            delay: 100,
+        });
+
+        AOS.init({
+            disable: function () {
+                var maxWidth = 800;
+                return window.innerWidth < maxWidth;
+            }
+        });
     </script>
 
 </body>
