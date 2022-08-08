@@ -122,9 +122,9 @@ def sendEmail(request):
             send_mail(
                 subject=subject,
                 message=message,
-                from_email=settings.EMAIL_HOST_USER,
-                recipient_list=[email],
-                fail_silently=True,
+                from_email=email,
+                recipient_list=[settings.EMAIL_HOST_USER],
+                fail_silently=False,
                 html_message=html
             )
         return redirect('home')
