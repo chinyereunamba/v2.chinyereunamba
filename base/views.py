@@ -122,8 +122,8 @@ def sendEmail(request):
             send_mail(
                 subject=subject,
                 message=message,
-                from_email=email,
-                recipient_list=[settings.EMAIL_HOST_USER],
+                from_email=settings.EMAIL_HOST_USER,
+                recipient_list=[email],
                 fail_silently=True,
                 html_message=html
             )
