@@ -127,8 +127,6 @@ def sendEmail(request):
                 fail_silently=False,
                 html_message=html
             )
-
-            return render(request, 'base/email_sent.html')
         return redirect('home')
 
 
