@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1y-dtdrw=_^k94mo#=h)l-u$(sv$-b+!_nx35s=wq06j(&utpa'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -133,19 +133,14 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-MEDIA_URL = '/img/'
+MEDIA_URL = '/images/'
 
-MEDIA_ROOT = BASE_DIR / 'static/img'
+MEDIA_ROOT = BASE_DIR / 'static/images'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# EMAIL_HOST = 'smtp.mailtrap.io'
-# EMAIL_HOST_USER = 'e53905b5cc230f'
-# EMAIL_HOST_PASSWORD = '05ca58865f6ed2'
-# EMAIL_PORT = '2525'
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'chinyereunamba17@gmail.com'

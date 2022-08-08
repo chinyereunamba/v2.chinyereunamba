@@ -23,6 +23,9 @@ class ProjectForm(ModelForm):
             'github': forms.TextInput(attrs={
                 'placeholder':'https://github.com/'
             }),
+            'hosted_at': forms.TextInput(attrs={
+                'placeholder':'https://example.herokuapp.com/'
+            }),
             'slug': forms.TextInput(attrs={
                 'placeholder':'slug'
             }),

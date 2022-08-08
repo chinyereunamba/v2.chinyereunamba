@@ -817,12 +817,12 @@ section > div {
     color: var(--secondary-color);
 }
 
-#portfolio .content .project .text .project-link a{
+#portfolio .content .project .text .project-link{
   display: flex;
   align-items: center;
 }
 
-#portfolio .content .project .text .project-link a i{
+#portfolio .content .project .text ul i{
   font-size: 1.5rem;
 }
 
@@ -990,7 +990,8 @@ footer small {
 }
 
 .project-form form{
-  max-width: 800px;
+  max-width: 650px;
+  width: 100%;
 }
 
 .form-input {

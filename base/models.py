@@ -25,6 +25,7 @@ class Project(models.Model):
     active = models.BooleanField(default=False)
     tags = models.ManyToManyField(Tag)
     github = models.URLField(blank=True, null=True)
+    hosted_at = models.URLField(blank=True, null=True)
     slug = models.SlugField(blank=True, null=True)
 
     def __str__(self):
