@@ -39,7 +39,7 @@ class ContactForm(forms.Form):
         'name': 'email'
     }))
     subject = forms.CharField(max_length=200, widget=forms.TextInput(attrs={
-        'placeholder': 'We want you on our team',
+        'placeholder': 'Subject',
         'name': 'subject'
     }))
 
