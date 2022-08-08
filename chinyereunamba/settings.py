@@ -142,16 +142,16 @@ MEDIA_ROOT = BASE_DIR / 'static/img'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-EMAIL_HOST = 'smtp.mailtrap.io'
-EMAIL_HOST_USER = 'e53905b5cc230f'
-EMAIL_HOST_PASSWORD = '05ca58865f6ed2'
-EMAIL_PORT = '2525'
+# EMAIL_HOST = 'smtp.mailtrap.io'
+# EMAIL_HOST_USER = 'e53905b5cc230f'
+# EMAIL_HOST_PASSWORD = '05ca58865f6ed2'
+# EMAIL_PORT = '2525'
 
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-# EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'chinyereunamba17@gmail.com'
+EMAIL_HOST_PASSWORD = 'jpjvnfitatlzfshs'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 
