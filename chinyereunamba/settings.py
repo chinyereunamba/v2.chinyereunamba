@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'base.apps.BaseConfig',
     'crispy_forms',
-    # 'ckeditor',
-    # 'ckeditor_uploader'
+    'ckeditor',
+    'ckeditor_uploader'
 ]
 
 MIDDLEWARE = [
@@ -151,5 +151,15 @@ EMAIL_PORT = '2525'
 # EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 # EMAIL_PORT = 587
 # EMAIL_USE_TLS = True
+
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': '100%',
+    }
+}
 
 django_on_heroku.settings(locals())

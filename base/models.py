@@ -1,8 +1,8 @@
 from django.db import models
 from django.utils.text import slugify
 
-# from ckeditor.fields import RichTextField
-# from ckeditor_uploader.fields import RichTextUploadingField
+from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 
 import PIL
 
@@ -20,7 +20,7 @@ class Project(models.Model):
     title = models.CharField(max_length=100, blank=False, null=False)
     headline = models.TextField(max_length=250, blank=True, null=True)
     image = models.ImageField(default="work-1.jpg", blank=True, null=True)
-    body = models.TextField(blank=True, null=True)
+    body = RichTextUploadingField(blank=True, null=True)
     date = models.DateField(auto_now_add=True, blank=True, null=True)
     active = models.BooleanField(default=False)
     tags = models.ManyToManyField(Tag)

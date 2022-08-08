@@ -28,7 +28,7 @@
                 </div>
                 <div class="button">
                     <div class="icon">
-                        <a href="#about">
+                        <a href="/#about">
                             <i class="bx bx-user"></i>
                             <span>About</span>
                         </a>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="button">
                     <div class="icon">
-                        <a href="#services">
+                        <a href="/#services">
                             <i class="bx bx-server"></i>
                             <span>Services</span>
                         </a>
@@ -44,7 +44,7 @@
                 </div>
                 <div class="button">
                     <div class="icon">
-                        <a href="#portfolio">
+                        <a href="/#portfolio">
                             <i class="bx bx-briefcase"></i>
                             <span>Works</span>
                         </a>
@@ -52,7 +52,7 @@
                 </div>
                 <div class="button">
                     <div class="icon">
-                        <a href="#contact">
+                        <a href="/#contact">
                             <i class="bx bx-envelope"></i>
                             <span>Contact</span>
                         </a>
@@ -68,6 +68,7 @@
         {% block content %}
 
         {% endblock content %}
+        {% include 'base/footer.html' %}
     </div>
     <script src="{% static 'js/main.js' %}"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -75,9 +76,11 @@
         AOS.init({
             disable: 'mobile',
             offset: 200,
-            duration: 500,
+            duration: 700,
             easing: 'ease-in-quad',
-            delay: 100,
+            delay: 80,
+            once: true
+
         });
 
         AOS.init({

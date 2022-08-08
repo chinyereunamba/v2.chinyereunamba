@@ -68,7 +68,7 @@ def updateProject(request, slug):
         if form.is_valid():
             form.save()
 
-        return redirect('projects')
+        return redirect('viewProject', slug=slug)
 
     context = {
         'form': form,

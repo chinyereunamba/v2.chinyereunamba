@@ -47,161 +47,154 @@
                         </div>
                     </div>
                 </div>
-                <a href="https://www.linkedin.com/in/chinyereunamba" target="_blank"><button class="btn">Hire me</button></a>
+                <a href="https://www.linkedin.com/in/chinyereunamba" target="_blank"><button class="btn">Hire
+                        me</button></a>
             </div>
             <img class="grid" src="{% static 'img/grid.png' %}" alt="">
         </div>
     </section>
-
-    <section id="about" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="800">
-        <div class="about">
-            <h1 class="sec-title">About me</h1>
-            <h1 class="invisible">About</h1>
-            <div class="content">
-                <div class="text">
-                    <p>My name is Chinyere Unamba. I'm a Full Stack Developer, currently based in Port Harcourt. My
-                        interest and love for programming has grown over the years making me want more of it</p>
-
-                    <p>
-                        My programming / developing career started back when I was in Secondary School. I needed to
-                        develop a game for a school project. I was asked to use unity, in search of another
-                        software, I found Python's Pygame then I began learning Python.
-                    </p>
-
-                    &nbsp;
-
-                    <p>Some of technologies I've been working with:</p>
-                    <div class="skills">
-                        <ul class="content-list">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>Javascript</li>
-
-                        </ul>
-                        <ul class="content-list">
-                            <li>Python</li>
-                            <li>Django</li>
-                            <li>React JS</li>
-                        </ul>
-                    </div>
-                    <div class="resume">
-                        <button class="btn"><i class="bx bx-file-blank"></i>Resume</button>
-                    </div>
-                </div>
-                <div class="img">
-                    <div>
-                        <img src={% static 'img/profile.png' %} alt="">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <section id="services" data-aos="fade-up" data-aos-anchor-placement="center-center">
-        <div class="services">
-            <h1 class="sec-title">What I Do</h1>
-            <h1 class="invisible">Services</h1>
-            <div class="content">
-                <div class="service-intro">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis atque minus fugiat
-                        nesciunt.
-                        Voluptate magnam nostrum deserunt laudantium veniam? Hello world how are you?</p>
-                </div>
-                <div class="service-card">
-                    <div class="card">
-                        <i class="bx bx-layer"></i>
-                        <h2>Design and Development</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                    </div>
-                    <div class="card">
-                        <i class="bx bx-cart-alt"></i>
-                        <h2>Ecommerce</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                    </div>
-
-                    <div class="card">
-                        <i class="bx bx-mobile-alt"></i>
-                        <h2>Mobile Friendly</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="portfolio" data-aos="fade-up" data-aos-anchor-placement="center-center">
-        <div class="work">
-            <h1 class="sec-title">What I've Built</h1>
-            <h1 class="invisible">Works</h1>
-            <div class="content">
-                {% for post in posts %}
-                <div class="project">
+    <div>
+        <section id="about" data-aos="fade-up">
+            <div class="about">
+                <h1 class="sec-title">About me</h1>
+                <h1 class="invisible">About</h1>
+                <div class="content">
                     <div class="text">
-                        <h2>{{post.title}}</h2>
-                        <p>{{post.headline}}</p>
-                        <ul>
-                            {% for tag in post.tags.all %}
-                            <li>{{tag}}</li>
-                            {% endfor %}
-                        </ul>
+                        <p>My name is Chinyere Unamba. I'm a Full Stack Developer, currently based in Port Harcourt. My
+                            interest and love for programming has grown over the years making me want more of it.</p>
 
-                        <ul class="project-link">
-                            <li><a href={{post.github}} target="_blank">Github</a></li>
-                            <li><a href={% url 'viewProject' post.slug %}>Read More</a></li>
-                        </ul>
+                        <p>
+                            My programming / developing career started back when I was in Secondary School. I needed to
+                            develop a game for a school project. I was asked to use unity, in search of another
+                            software, I found Python's Pygame then I began learning Python.
+                        </p>
+
+                        &nbsp;
+
+                        <p>Some of technologies I've been working with:</p>
+                        <div class="skills">
+                            <ul class="content-list">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Javascript</li>
+
+                            </ul>
+                            <ul class="content-list">
+                                <li>Python</li>
+                                <li>Django</li>
+                                <li>React JS</li>
+                            </ul>
+                        </div>
+                        <div class="resume">
+                            <a href="{% static 'Chinyere Unamba.pdf' %}" target="_blank"><button class="btn"><i
+                                        class="bx bx-file-blank"></i>Resume</button></a>
+                        </div>
                     </div>
                     <div class="img">
-                        <img src={{post.image.url}} alt="">
+                        <div>
+                            <img src={% static 'img/profile.png' %} alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <div>
+        <section id="services" data-aos="fade-up">
+            <div class="services">
+                <h1 class="sec-title">What I Do</h1>
+                <h1 class="invisible">Services</h1>
+                <div class="content">
+                    <div class="service-intro">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis atque minus fugiat
+                            nesciunt.
+                            Voluptate magnam nostrum deserunt laudantium veniam? Hello world how are you?</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="card">
+                            <i class="bx bx-layer"></i>
+                            <h2>Design and Development</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                        <div class="card">
+                            <i class="bx bx-cart-alt"></i>
+                            <h2>Ecommerce</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+
+                        <div class="card">
+                            <i class="bx bx-mobile-alt"></i>
+                            <h2>Mobile Friendly</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
                     </div>
                 </div>
-                {% endfor %}
+            </div>
+        </section>
+    </div>
+    <div>
+        <section id="portfolio" data-aos="fade-up">
+            <div class="work">
+                <h1 class="sec-title">What I've Built</h1>
+                <h1 class="invisible">Works</h1>
+                <div class="content">
+                    {% for post in posts %}
+                    <div class="project">
+                        <div class="text">
+                            <a href="{% url 'viewProject' post.slug %}">
+                                <h2>{{post.title}}</h2>
+                            </a>
+                            <p>{{post.headline}}</p>
+                            <ul>
+                                {% for tag in post.tags.all %}
+                                <li>{{tag}}</li>
+                                {% endfor %}
+                            </ul>
 
-                <div class="show">
-                    <p><a href={% url 'projects' %}>Show more <i class="bx bx-caret-down"></i></a></p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="contact">
-        <div class="contact">
-            <h1 class="sec-title">Get In Touch</h1>
-            <h1 class="invisible">Contact</h1>
-            <div class="content">
-                <div>
+                            <ul class="project-link">
+                                <li><a href={{post.github}} target="_blank"><i class="bx bxl-github"></i></a></li>
+                                <li><a href={% url 'viewProject' post.slug %}><i class='bx bx-link-external'></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="img">
+                            <a href="{% url 'viewProject' post.slug %}">
+                                <img src={{post.image.url}} alt="">
+                            </a>
+                        </div>
+                    </div>
+                    {% endfor %}
 
-                    <p>I am open to offers. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-                        eveniet
-                        in pariatur ut, vel quo sed omnis vitae at quidem!</p>
-                    <a href="{% url 'contact' %}"><button class="btn contact-btn">Contact me</button></a>
+                    <div class="show">
+                        <p>
+                            <a href={% url 'projects' %}>
+                                <i class="bx bx-fade-down">
+                                    <i class="bx bx-caret-down"></i>
+                                </i>
+                            </a>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <footer>
-        <div class="footer-link">
-            <div class="button">
-                <div class="icon">
-                    <a href="#">
-                        <i class="bx bxl-github"></i>
-                    </a>
+        </section>
+    </div>
+    <div>
+        <section id="contact" data-aos="fade-up">
+            <div class="contact">
+                <h1 class="sec-title">Get In Touch</h1>
+                <h1 class="invisible">Contact</h1>
+                <div class="content">
+                    <div>
+
+                        <p>I am open to offers. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+                            eveniet
+                            in pariatur ut, vel quo sed omnis vitae at quidem!</p>
+                        <a href="{% url 'contact' %}"><button class="btn contact-btn">Contact me</button></a>
+                    </div>
                 </div>
             </div>
-            <div class="button">
-                <div class="icon">
-                    <a href="#">
-                        <i class="bx bxl-stack-overflow"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="button">
-                <div class="icon">
-                    <a href="#">
-                        <i class="bx bxl-linkedin"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <small>Designed &amp; Built by Chinyere Unamba</small>
-    </footer>
+        </section>
+    </div>
 
 </body>
 
