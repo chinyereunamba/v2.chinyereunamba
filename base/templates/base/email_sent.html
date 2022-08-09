@@ -1,12 +1,60 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'boxicons/css/boxicons.min.css' %}">
     <title>Email Sent</title>
+    <style>
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section>* {
+            margin: 0.5em auto;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        h1{
+            font-family: 'Consolas', monospace;
+            font-size: 2.2rem;
+            color: var(--secondary-color);
+        }
+
+        p, a{
+            color: var(--primary-color);
+        }
+        p{
+            font-size: 1.1rem;
+        }
+
+        a:hover{
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+        i > *{
+            font-weight: 900;
+        }
+        
+    </style>
 </head>
+
 <body>
-    <h1>Email Sent</h1>
+    <div class="container">
+        <section>
+            <h1>Email Sent</h1>
+            <p>Thank you
+                for contacting me. I would get back to you as soon as possible.</p>
+            <p><a href="{% url 'home' %}"><i class="bx bx-fade-left">&leftarrow; </i>Back to Home</a></p>
+
+        </section>
+    </div>
 </body>
+
 </html>

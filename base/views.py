@@ -22,13 +22,6 @@ def home(request):
     return render(request, "base/index.html", context=context)
 
 
-def login(request):
-    return render(request, "base/login.html")
-
-
-def signup(request):
-    return render(request, "base/register.html")
-
 
 def projects(request):
     posts = Project.objects.all()
@@ -124,10 +117,10 @@ def sendEmail(request):
                 message=message,
                 from_email=email,
                 recipient_list=[settings.EMAIL_HOST_USER],
-                fail_silently=False,
+                fail_silently=True,
                 html_message=html
             )
-        return redirect('home')
+        return render(request, 'base/email_sent.html')
 
 
     context = {

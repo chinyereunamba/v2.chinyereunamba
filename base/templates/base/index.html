@@ -50,28 +50,32 @@
                 <a href="https://www.linkedin.com/in/chinyereunamba" target="_blank"><button class="btn">Hire
                         me</button></a>
             </div>
-            <img class="grid" src="{% static 'img/grid.png' %}" alt="">
+            <img class="grid" src="{% static 'images/grid.png' %}" alt="">
         </div>
     </section>
-    <div>
-        <section id="about" data-aos="fade-up">
+    <section id="about" data-aos="fade-up">
+        <div>
             <div class="about">
-                <h1 class="sec-title">About me</h1>
-                <h1 class="invisible">About</h1>
+                <div class="title">
+                    <h1 class="sec-title">About me</h1>
+                    <h1 class="invisible">About</h1>
+                </div>
                 <div class="content">
                     <div class="text">
-                        <p>My name is Chinyere Unamba. I'm a Full Stack Developer, currently based in Port Harcourt. My
-                            interest and love for programming has grown over the years making me want more of it.</p>
-
+                        <p style="letter-spacing: 0.2px; word-spacing:1px">I'm Chinyere Unamba, a Full Stack Developer
+                            currently based in <strong style="font-weight: 900; color:var(--secondary-color)"
+                                href="#">Port Harcourt</a></strong>. Having over two
+                            years of experience in Web Development, I don't have any professional experience.<br>
+                            When I began programming, I was in Secondary School. We are asked to create a game with the
+                            objective of helping toddlers learn. Friends suggested <strong><a
+                                    style="font-weight: 900; color:var(--secondary-color)" href="#">Unity</a></strong>,
+                            in search of another software, I came across <strong><a
+                                    style="font-weight: 900; color:var(--secondary-color)" href="#">Pygame</a></strong>
+                            then, I began learning Python.<br>From developing minature games to creating simple desktop
+                            apps and now Web Development.
+                        </p>&nbsp;
                         <p>
-                            My programming / developing career started back when I was in Secondary School. I needed to
-                            develop a game for a school project. I was asked to use unity, in search of another
-                            software, I found Python's Pygame then I began learning Python.
-                        </p>
-
-                        &nbsp;
-
-                        <p>Some of technologies I've been working with:</p>
+                            Some of technologies I've been working with:</p>
                         <div class="skills">
                             <ul class="content-list">
                                 <li>HTML</li>
@@ -92,22 +96,24 @@
                     </div>
                     <div class="img">
                         <div>
-                            <img src={% static 'img/profile.png' %} alt="">
+                            <img src={% static 'images/profile.png' %} alt="">
                         </div>
                     </div>
 
                 </div>
             </div>
-        </section>
-    </div>
-    <div>
-        <section id="services" data-aos="fade-up">
+        </div>
+    </section>
+    <section id="services" data-aos="fade-up">
+        <div>
             <div class="services">
-                <h1 class="sec-title">What I Do</h1>
-                <h1 class="invisible">Services</h1>
+                <div class="title">
+                    <h1 class="sec-title">What I Do</h1>
+                    <h1 class="invisible">Services</h1>
+                </div>
                 <div class="content">
                     <div class="service-intro">
-                        <p>Creates website and web apps with impecable design and sturcture. Render quality services to
+                        <p>Create websites and web apps with impecable design and sturcture. Render quality services to
                             clients.
                             I'm always timely to meet up deadlines from clients.</p>
                     </div>
@@ -131,13 +137,15 @@
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
-    <div>
-        <section id="portfolio" data-aos="fade-up">
+        </div>
+    </section>
+    <section id="portfolio" data-aos="fade-up">
+        <div>
             <div class="work">
-                <h1 class="sec-title">What I've Built</h1>
-                <h1 class="invisible">Works</h1>
+                <div class="title">
+                    <h1 class="sec-title">What I've Built</h1>
+                    <h1 class="invisible">Works</h1>
+                </div>
                 <div class="content">
                     {% for post in posts %}
                     <div class="project">
@@ -153,7 +161,8 @@
                             </ul>
 
                             <ul class="project-link">
-                                <li><a target="_blank" href={{post.github}} target="_blank"><i class="bx bxl-github"></i></a></li>
+                                <li><a target="_blank" href={{post.github}} target="_blank"><i
+                                            class="bx bxl-github"></i></a></li>
                                 {% if post.hosted_at != None %}
                                 <li><a href="{{post.hosted_at}}"><i class="bx bx-link-external"></i></a></li>
                                 {% else %}
@@ -169,23 +178,23 @@
                     {% endfor %}
 
                     <div class="show">
-                        <p>
-                            <a href={% url 'projects' %}>
-                                <i class="bx bx-fade-down">
-                                    <i class="bx bx-caret-down"></i>
-                                </i>
-                            </a>
-                        </p>
+                        <a href={% url 'projects' %}>
+                            <button class="btn">
+                                Show more
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
-    <div>
-        <section id="contact" data-aos="fade-up">
+        </div>
+    </section>
+    <section id="contact" data-aos="fade-up">
+        <div>
             <div class="contact">
-                <h1 class="sec-title">Get In Touch</h1>
-                <h1 class="invisible">Contact</h1>
+                <div class="title">
+                    <h1 class="sec-title">Get In Touch</h1>
+                    <h1 class="invisible">Contact</h1>
+                </div>
                 <div class="content">
                     <div>
 
@@ -196,8 +205,8 @@
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
 </body>
 

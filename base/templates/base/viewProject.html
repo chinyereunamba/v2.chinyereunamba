@@ -21,6 +21,11 @@
                         <img src={{post.image.url}} alt="{{post.title}}">
                     </div>
                     <h2>{{post.title}}</h2>
+                    <div class="tags">
+                        {% for tag in post.tags.all %}
+                        <p>{{tag}}</p>
+                        {% endfor %}
+                    </div>
                     <div class="post-link project-link">
                         <a target="_blank" href={{post.github}} target="_blank"><i class="bx bxl-github"></i></a>
                         {% if post.hosted_at != None %}
@@ -28,17 +33,12 @@
                         {% else %}
                         {% endif %}
                     </div>
-                    <div class="tags">
-                        {% for tag in post.tags.all %}
-                        <p>{{tag}}</p>
-                        {% endfor %}
-                    </div>
                     <div class="post-content">
                         <div class="headline">
                             <p>{{post.headline}}</p>
                         </div>
                         <div class="post-body">
-                            <p>{{post.body|safe}}</p>
+                            {{post.body|safe}}
                         </div>
                     </div>
                 </div>
