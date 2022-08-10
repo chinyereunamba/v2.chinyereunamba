@@ -2,42 +2,45 @@
 {% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" href="{% static 'boxicons/css/boxicons.min.css' %}">
     <title>Contact me</title>
 </head>
+
 <body>
     {% block content %}
-        <section id="contact-form">
-            <div class="contact-form form">
-                <h1 class="sec-title">Get In Touch</h1>
-                <h1 class="invisible">Contact</h1>
-                <form action="" method="POST">
-                    {% csrf_token %}
+    <section id="contact-form">
+        <div class="contact-form form">
+            <h1 class="sec-title">Get In Touch</h1>
+            <h1 class="invisible">Contact</h1>
+            <form action="" method="POST">
+                {% csrf_token %}
 
-                    <div class="form-input">
-                        {{form.name}}
-                    </div>
-                    <div class="form-input">
-                        {{form.email}}
-                    </div>
-                    <div class="form-input">
-                        {{form.subject}}
-                    </div>
-                    <div class="form-input">
-                        {{form.message}}
-                    </div>
+                <div class="form-input">
+                    {{form.name}}
+                </div>
+                <div class="form-input">
+                    {{form.email}}
+                </div>
+                <div class="form-input">
+                    {{form.subject}}
+                </div>
+                <div class="form-input">
+                    {{form.message}}
+                </div>
 
-                    <div class="submit">
-                        <button class="btn" type="submit"><i class="bx bx-send"></i>Send</button>
-                    </div>
-                </form>
-            </div>
-        </section>
+                <div class="submit">
+                    <button class="btn" type="submit"><i class="bx bx-send"></i>Send</button>
+                </div>
+            </form>
+        </div>
+    </section>
     {% endblock %}
 </body>
+
 </html>

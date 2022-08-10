@@ -15,10 +15,10 @@
         <div class="work">
             <h1 class="sec-title">What I've built</h1>
             <h1 class="invisible">Works</h1>
-            {% if request.user.is_authenticated %}
+            {% if request.user.is_superuser %}
 
             <div class="create">
-                <a href={% url 'createProject' %}>
+                <a href="{% url 'createProject' %}">
                     <button class="btn"><i class="bx bx-file"></i>Create Project</button>
                 </a>
             </div>
@@ -44,9 +44,9 @@
                             <li><a target="_blank" href={{post.hosted_at}}><i class="bx bx-link-external"></i></a></li>
                             {% else %}
                             {% endif %}
-                            {% if request.user.is_authenticated %}
-                            <li><a href={% url 'updateProject' post.slug %}> <i class="bx bx-edit"></i> </a></li>
-                            <li><a href={% url 'deleteProject' post.slug %}> <i class="bx bx-trash"></i> </a></li>
+                            {% if request.user.is_superuser %}
+                            <li><a href="{% url 'updateProject' post.slug %}"> <i class="bx bx-edit"></i> </a></li>
+                            <li><a href="{% url 'deleteProject' post.slug %}"> <i class="bx bx-trash"></i> </a></li>
                             {% endif %}
                         </ul>
                     </div>

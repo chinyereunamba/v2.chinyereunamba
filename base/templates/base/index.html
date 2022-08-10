@@ -90,13 +90,17 @@
                             </ul>
                         </div>
                         <div class="resume">
-                            <a href="{% static 'Chinyere Unamba.pdf' %}" target="_blank"><button class="btn"><i
-                                        class="bx bx-file-blank"></i>Resume</button></a>
+                            <a href="{% static 'Chinyere Unamba.pdf' %}" target="_blank">
+                                <button class="btn">
+                                    <i class="bx bx-file-blank"></i>
+                                    Resume
+                                </button>
+                            </a>
                         </div>
                     </div>
                     <div class="img">
                         <div>
-                            <img src={% static 'images/profile.png' %} alt="">
+                            <img src="{% static 'images/profile.png' %}" alt="">
                         </div>
                     </div>
 
@@ -178,7 +182,7 @@
                     {% endfor %}
 
                     <div class="show">
-                        <a href={% url 'projects' %}>
+                        <a href="{% url 'projects' %}">
                             <button class="btn">
                                 Show more
                             </button>
