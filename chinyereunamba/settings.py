@@ -131,6 +131,9 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
 
+DEBUG_PROPAGATE_EXCEPTIONS = True
+# STATICFILES_STORAGE =
+
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 MEDIA_URL = '/images/'
