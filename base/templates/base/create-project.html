@@ -13,66 +13,71 @@
     {% block content %}
     <section>
         <div class="project-form">
-            <h1 class="sec-title">{{option}}</h1>
-            <h1 class="invisible">Works</h1>
-            <form action="" method="POST"  enctype="multipart/form-data">
-                {% csrf_token %}
-                {{form.media}}
-                <div class="form-input">
-                    <span><i class="bx bx-brain"></i></span>
-                    {{form.title}}
+            <div class="title">
+                <h1 class="sec-title">{{option}}</h1>
+                <h1 class="invisible">Works</h1>
+            </div>
+            <div class="content">
 
-                </div>
-                <div class="form-input">
-                    <span><i class="bx bx-text"></i></span>
-                    {{form.headline}}
-
-                </div>
-                <div class="form-input">
-                    <span><i class="bx bx-image"></i></span>
-                    {{form.image}}
-
-                </div>
-
-                <div class="options">
-                    <span><i class="bx bx-tag"></i></span>
-                    <div class="checkbox">
-                        {% for tag in form.tags %}
-                        {{tag}}
-                        {% endfor %}
+                <form action="" method="POST"  enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{form.media}}
+                    <div class="form-input">
+                        <span><i class="bx bx-brain"></i></span>
+                        {{form.title}}
+    
                     </div>
-
-                </div>
-                <div class="form-input">
-                    <span><i class="bx bxl-github"></i></span>
-                    {{form.github}}
-                </div>
-                <div class="form-input">
-                    <span><i class="bx bxl-heroku"></i></span>
-                    {{form.hosted_at}}
-                </div>
-                <div class="options">
-                    <span><i class="bx bx-checkbox-checked"></i></span>
-                    <div class="checkbox">
-                        <label for="id_active">
-                            {{form.active}} Active
-                        </label>
+                    <div class="form-input">
+                        <span><i class="bx bx-text"></i></span>
+                        {{form.headline}}
+    
                     </div>
-                </div>
-
-                <div class="form-input">
-                    <span><i class="bx bx-note"></i></span>
-                    {{form.body}}
-                </div>
-                <div class="form-input">
-                    <span><i class="bx bx-slug"></i></span>
-                    {{form.slug}}
-                </div>
-
-                <div class="submit">
-                    <button type="submit" class="btn"><i class="bx bx-save"></i>Save Project</button>
-                </div>
-            </form>
+                    <div class="form-input">
+                        <span><i class="bx bx-image"></i></span>
+                        {{form.image}}
+    
+                    </div>
+    
+                    <div class="options">
+                        <span><i class="bx bx-tag"></i></span>
+                        <div class="checkbox">
+                            {% for tag in form.tags %}
+                            {{tag}}
+                            {% endfor %}
+                        </div>
+    
+                    </div>
+                    <div class="form-input">
+                        <span><i class="bx bxl-github"></i></span>
+                        {{form.github}}
+                    </div>
+                    <div class="form-input">
+                        <span><i class="bx bxl-heroku"></i></span>
+                        {{form.hosted_at}}
+                    </div>
+                    <div class="options">
+                        <span><i class="bx bx-checkbox-checked"></i></span>
+                        <div class="checkbox">
+                            <label for="id_active">
+                                {{form.active}} Active
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="form-input">
+                        <span><i class="bx bx-note"></i></span>
+                        {{form.body}}
+                    </div>
+                    <div class="form-input">
+                        <span><i class="bx bx-slug"></i></span>
+                        {{form.slug}}
+                    </div>
+    
+                    <div class="submit">
+                        <button type="submit" class="btn"><i class="bx bx-save"></i>Save Project</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
     {% endblock %}

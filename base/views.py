@@ -12,9 +12,17 @@ from .forms import *
 
 # Create your views here.
 
+def error_404(request):
+    context = {}
+    return render(request, 'base/404.html', context, status=404)
+def error_403(request):
+    context = {}
+    return render(request, 'base/403.html', context, status=403)
+def error_500(request):
+    return render(request, 'base/500.html')
 
 def home(request):
-    posts = Project.objects.all()[:3]
+    posts = Project.objects.filter(active=True)[:3]
 
     context = {
         "posts": posts,
@@ -24,7 +32,7 @@ def home(request):
 
 
 def projects(request):
-    posts = Project.objects.all()
+    posts = Project.objects.filter(active=True)
 
     context = {
         "posts": posts,
