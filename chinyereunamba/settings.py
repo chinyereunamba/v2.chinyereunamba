@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', get_random_secret_key())
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1']
 
 
 # Application definition
@@ -83,12 +83,8 @@ WSGI_APPLICATION = 'chinyereunamba.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config("DATABASE_NAME"),
-        'USER': config('DATABASE_USER'),
-        'PASSWORD': '1234',
-        'HOST': config('HOST'),
-        # 'OPTIONS': {'sslmode': 'require'},
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 

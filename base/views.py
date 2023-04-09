@@ -12,14 +12,6 @@ from .forms import *
 
 # Create your views here.
 
-def error_404(request):
-    context = {}
-    return render(request, 'base/404.html', context, status=404)
-def error_403(request):
-    context = {}
-    return render(request, 'base/403.html', context, status=403)
-def error_500(request):
-    return render(request, 'base/500.html')
 
 def home(request):
     posts = Project.objects.filter(active=True)[:3]
@@ -28,7 +20,6 @@ def home(request):
         "posts": posts,
     }
     return render(request, "base/index.html", context=context)
-
 
 
 def projects(request):
@@ -47,6 +38,9 @@ def createProject(request):
         form = ProjectForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
+            print("New project created")
+        else:
+            print("Form error")
 
         return redirect('projects')
 
@@ -129,7 +123,6 @@ def sendEmail(request):
                 html_message=html
             )
         return render(request, 'base/email_sent.html')
-
 
     context = {
         'form': form,
